@@ -1,0 +1,45 @@
+---
+import Image from "astro/components/Image.astro";
+import svgReference from "../assets/home-logo-sistemisolutions.svg";
+import DeleteX from "../assets/delete.png";
+---
+
+<div class="bg-slate-800 relative">
+  <div class="h-20 flex justify-between items-center p-8">
+    <Image class="w-44" src={svgReference} alt="ova radi" />
+    <button class="text-white focus:outline-none">
+      <Image class="w-10 invert" src={DeleteX} alt="" />
+    </button>
+  </div>
+  <div
+    id="dropdownList"
+    class="flex justify-center pb-8 hidden bg-gray-800 text-white py-2 px-4 mt-2 rounded"
+  >
+    <ul class="text-white space-y-8">
+      <li>
+        <a href="">About</a>
+      </li>
+      <li>
+        <a href="">Technology</a>
+      </li>
+      <li>
+        <a href="">Monitor:i</a>
+      </li>
+      <li>
+        <a href="">Clients</a>
+      </li>
+      <li>
+        <a href="">Partners</a>
+      </li>
+      <li>
+        <a href="">Careers</a>
+      </li>
+      <li>
+        <a href="">Documents</a>
+      </li>
+      <li>
+        <a href="">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</div>
