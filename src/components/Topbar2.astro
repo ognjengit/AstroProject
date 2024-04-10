@@ -4,8 +4,8 @@ import svgReference from "../assets/home-logo-sistemisolutions.svg";
 import DeleteX from "../assets/delete.png";
 ---
 
-<div class="bg-slate-700 overflow-hidden relative">
-  <div class="z-10 relative bg-inherit flex justify-between items-center p-8">
+<div class="bg-slate-800 overflow-hidden relative">
+  <div class="z-10 relative bg-slate-800 flex justify-between items-center p-8">
     <Image class="w-44" src={svgReference} alt="ova radi" />
     <button id="topbar-menu-button" class="text-white focus:outline-none">
       <Image class="w-10 invert" src={DeleteX} alt="" />
@@ -13,7 +13,7 @@ import DeleteX from "../assets/delete.png";
   </div>
   <div
     id="dropdownList"
-    class="flex hidden justify-center pb-8 bg-inherit text-white py-2 px-4 mt-2 rounded"
+    class="-top-full transition duration-500 flex justify-center pb-8 bg-inherit text-white py-2 px-4 mt-2 rounded"
   >
     <ul class="text-white space-y-8">
       <li>
@@ -51,10 +51,11 @@ import DeleteX from "../assets/delete.png";
 
   function updateDropdown() {
     if (dropdownVisible) {
-      dropdownList.classList.remove("hidden");
+      dropdownList.classList.remove("-translate-y-full");
       return;
     }
-    dropdownList.classList.add("hidden");
+
+    dropdownList.classList.add("-translate-y-full");
   }
 
   function toggleDropdown() {
