@@ -3,6 +3,8 @@
 import Button from "../components/Button.astro";
 import Header from "../components/Header.astro";
 import Topbar from "../components/Topbar.astro";
+import Info from "../components/Info.astro";
+import TechWeUse from "../components/TechWeUse.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -20,6 +22,10 @@ import Topbar from "../components/Topbar.astro";
   <body class="bg-slate-900">
     <Header />
     <Topbar />
+    <Info />
+    <TechWeUse />
+    <!-- <MonitoriInfo />
+    <Clients /> -->
     <div class="grid place-items-center h-screen content-center">
       <Button>Tailwind Button in Astro!</Button>
       <a class="text-white" href="/markdown-page" class="p-4 underline"
