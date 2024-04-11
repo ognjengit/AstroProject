@@ -1,22 +1,47 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
+import RedOBadge from "../assets/oraclebadgered.svg";
+import Blue0Badge from "../assets/oraclebadgeblue.svg";
+import CiscoBadge from "../assets/cisco-badge.webp";
+import CheckPoint from "../assets/checkpoint-badge.png";
+import TechIcon from "../assets/tech.png";
+import MoneyIcon from "../assets/money.png";
+import TransportIcon from "../assets/transport.png";
+import MaintenanceIcon from "../assets/maintenance.png";
 ---
 
-<div class="text-white bg-orange-800 rounded-xl p-8 m-10">
-  <h1>sistemisolutions - Enhancing IT Performance</h1>
-  <img src="#" alt="oracleBadge" />
-  <p>
-    With decades of hands-on expertise in the domain of software innovation,
-    deployment, and maintenance, we have consistently pushed the boundaries of
-    what is possible in the ever-evolving landscape of technology. At sistem:i
-    solutions, we are a dynamic force in the world of software development and
-    maintenance, delivering top-notch solutions to the technology, finance, and
-    transportation industries. Our journey of achievement is fueled by a
-    relentless pursuit of excellence, which has enabled us to forge strong
-    partnerships with industry leaders like Oracle, Checkpoint, and Cisco. These
-    partnerships have provided us with valuable insights and resources, allowing
-    us to stay at the forefront of technological advancements. By combining our
-    expertise with these collaborations, we empower our clients with innovative
-    solutions that drive efficiency, enhance security, and foster growth.
-  </p>
+<div class="text-white bg-zinc-800 rounded-xl p-8 m-10">
+  <div class="flex justify-between">
+    <h1 class="">sistemisolutions - Enhancing IT Performance</h1>
+    <div class="flex gap-4">
+      <Image class="size-10" src={Blue0Badge} alt="radi li" />
+      <Image class="size-10" src={RedOBadge} alt="radi li" />
+      <Image class="size-10" src={CheckPoint} alt="radi li" />
+      <Image class="size-10" src={CiscoBadge} alt="radi li" />
+    </div>
+  </div>
+  <div class="flex gap-10 mt-6">
+    <p class="w-4/5">
+      With decades of hands-on expertise in the domain of software innovation,
+      deployment, and maintenance, we have consistently pushed the boundaries of
+      what is possible in the ever-evolving landscape of technology. At sistem:i
+      solutions, we are a dynamic force in the world of software development and
+      maintenance, delivering top-notch solutions to the technology, finance,
+      and transportation industries. Our journey of achievement is fueled by a
+      relentless pursuit of excellence, which has enabled us to forge strong
+      partnerships with industry leaders like Oracle, Checkpoint, and Cisco.
+      These partnerships have provided us with valuable insights and resources,
+      allowing us to stay at the forefront of technological advancements. By
+      combining our expertise with these collaborations, we empower our clients
+      with innovative solutions that drive efficiency, enhance security, and
+      foster growth.
+    </p>
+    <div class="flex-row">
+      <Image class="size-16 p-1" src={TechIcon} alt="" />
+      <Image class="size-16 p-1" src={MoneyIcon} alt="" />
+      <Image class="size-16 p-1" src={TransportIcon} alt="" />
+      <Image class="size-16 p-1" src={MaintenanceIcon} alt="" />
+    </div>
+  </div>
 </div>

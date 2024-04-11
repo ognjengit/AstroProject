@@ -1,7 +1,25 @@
 ---
-
+import { Image } from "astro:assets";
+import CLogo from "../assets/c.svg";
+import SwiftLogo from "../assets/swift.svg";
 ---
 
-<div class="text-white bg-orange-800 rounded-xl p-8 m-10">
-  <img src="" alt="" />
+<div
+  id="carousel"
+  class="text-white bg-orange-800 rounded-xl p-8 m-10 flex gap-8 overflow-hidden"
+>
+  <Image class="size-24" src={CLogo} alt="radi li?" />
+  <Image class="size-24" src={SwiftLogo} alt="" />
+  <Image class="size-24" src={CLogo} alt="radi li?" />
+  <Image class="size-24" src={SwiftLogo} alt="" />
+  <Image class="size-24" src={CLogo} alt="radi li?" />
+  <Image class="size-24" src={SwiftLogo} alt="" />
+  <Image class="size-24" src={CLogo} alt="radi li?" />
+  <Image class="size-24" src={SwiftLogo} alt="" />
+  <Image class="size-24" src={CLogo} alt="radi li?" />
+  <Image class="size-24" src={SwiftLogo} alt="" />
+  <Image class="size-24" src={CLogo} alt="radi li?" />
+  <Image class="size-24" src={SwiftLogo} alt="" />
+  <Image class="size-24" src={CLogo} alt="radi li?" />
+  <Image class="size-24" src={SwiftLogo} alt="" />
 </div>
