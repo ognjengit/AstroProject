@@ -6,20 +6,45 @@ import SwiftLogo from "../assets/swift.svg";
 
 <div
   id="carousel"
-  class="text-white bg-orange-800 rounded-xl p-8 m-10 flex gap-8 overflow-hidden"
+  class="text-white bg-sky-900 rounded-xl p-8 m-10 overflow-hidden"
 >
-  <Image class="size-24" src={CLogo} alt="radi li?" />
-  <Image class="size-24" src={SwiftLogo} alt="" />
-  <Image class="size-24" src={CLogo} alt="radi li?" />
-  <Image class="size-24" src={SwiftLogo} alt="" />
-  <Image class="size-24" src={CLogo} alt="radi li?" />
-  <Image class="size-24" src={SwiftLogo} alt="" />
-  <Image class="size-24" src={CLogo} alt="radi li?" />
-  <Image class="size-24" src={SwiftLogo} alt="" />
-  <Image class="size-24" src={CLogo} alt="radi li?" />
-  <Image class="size-24" src={SwiftLogo} alt="" />
-  <Image class="size-24" src={CLogo} alt="radi li?" />
-  <Image class="size-24" src={SwiftLogo} alt="" />
-  <Image class="size-24" src={CLogo} alt="radi li?" />
-  <Image class="size-24" src={SwiftLogo} alt="" />
+  <h1 class="pb-5 text-2xl">Technologies & Tools We Use</h1>
+  <div class="flex gap-8">
+    <ul class="flex">
+      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
+      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
+      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
+      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
+      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
+      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
+      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
+      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
+      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
+      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
+      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
+      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
+      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
+      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
+    </ul>
+  </div>
 </div>
+
+<!-- <script>
+  const carousel = document.querySelector(".carousel");
+  const carouselList = carousel.querySelector("ul");
+  const slides = carousel.querySelectorAll("li");
+
+  let counter = 0;
+  const slideWidth = slides[0].clientWidth;
+
+  function moveSlide() {
+    counter++;
+    if (counter === slides.length) {
+      counter = 0;
+    }
+    const offset = -slideWidth * counter;
+    carouselList.style.transform = `translateX(${offset}px)`;
+  }
+
+  setInterval(moveSlide, 3000); // Change slide every 3 seconds
+</script> -->
