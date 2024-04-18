@@ -10,41 +10,82 @@ import SwiftLogo from "../assets/swift.svg";
 >
   <h1 class="pb-5 text-2xl">Technologies & Tools We Use</h1>
   <div class="flex gap-8">
-    <ul class="flex">
-      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
-      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
-      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
-      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
-      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
-      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
-      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
-      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
-      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
-      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
-      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
-      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
-      <li><Image class="size-24" src={CLogo} alt="radi" /></li>
-      <li><Image class="size-24" src={SwiftLogo} alt="" /></li>
+    <ul id="carouselList" class="flex transition 1s ease-out">
+      <li class="size-44">
+        <Image class="p-2 size-44" src={SwiftLogo} alt="" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={CLogo} alt="radi" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={SwiftLogo} alt="" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={CLogo} alt="radi" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={SwiftLogo} alt="" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={CLogo} alt="radi" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={SwiftLogo} alt="" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={CLogo} alt="radi" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={SwiftLogo} alt="" />
+      </li>
+      <li class="size-44">
+        <Image class="p-2 size-44" src={CLogo} alt="radi" />
+      </li>
     </ul>
   </div>
 </div>
 
-<!-- <script>
-  const carousel = document.querySelector(".carousel");
-  const carouselList = carousel.querySelector("ul");
-  const slides = carousel.querySelectorAll("li");
+<script>
+  const initCarousel = () => {
+    const carousel = document.querySelector("#carousel") as HTMLElement;
+    const carouselList = document.querySelector(
+      "#carouselList"
+    ) as HTMLUListElement;
+    const slides = carouselList.querySelectorAll("li");
 
-  let counter = 0;
-  const slideWidth = slides[0].clientWidth;
+    const firstSlideClone = slides[0].cloneNode(true) as HTMLElement;
+    const lastSlideClone = slides[slides.length - 1].cloneNode(
+      true
+    ) as HTMLElement;
 
-  function moveSlide() {
-    counter++;
-    if (counter === slides.length) {
-      counter = 0;
+    carouselList.appendChild(firstSlideClone);
+    carouselList.insertBefore(lastSlideClone, slides[0]);
+
+    let counter = 1;
+    const slideWidth = slides[0].clientWidth;
+
+    function moveSlide() {
+      counter++;
+
+      if (counter === slides.length) {
+        counter = 1;
+        carouselList.style.transition = "none";
+        carouselList.style.transform = `translateX(-${slideWidth}px)`;
+
+        setTimeout(() => {
+          carouselList.style.transition = "1s ease-out";
+        }, 50);
+      }
+
+      const offset = -slideWidth * counter;
+      carouselList.style.transform = `translateX(${offset}px)`;
     }
-    const offset = -slideWidth * counter;
-    carouselList.style.transform = `translateX(${offset}px)`;
-  }
 
-  setInterval(moveSlide, 3000); // Change slide every 3 seconds
-</script> -->
+    setInterval(moveSlide, 3000);
+  };
+
+  initCarousel();
+
+  // Reinitialize carousel when components are re-rendered
+  document.addEventListener("astro:after-render", initCarousel);
+</script>
